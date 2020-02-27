@@ -1,0 +1,147 @@
+.news {
+  &__title {
+    //margin-bottom: $spacer;
+  }
+
+  .posted-on {
+    padding-bottom: 1rem;
+    display: block;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 2rem;
+    margin-top: 0rem;
+
+    @include media(phone) {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    article {
+      margin-top: 8rem;
+      flex: 0 0 52rem;
+
+      @include media(big-desktop) {
+        flex: 0 0 52rem;
+      }
+
+      @include media(phone) {
+        margin: $spacer 0;
+        padding: 0;
+        flex: 1;
+      }
+
+      img {
+        border-style: none;
+        max-width: 85%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+
+        @include media(big-desktop) {
+          max-width: 100%;
+          max-height: 36rem;
+        }
+      }
+
+      .entry-footer {
+        margin: 0rem;
+        padding: 0;
+      }
+    }
+
+    .read-more {
+      //margin: 0rem -5rem 0 0;
+      display: flex;
+      align-items: center;
+      float: right;
+
+      a {
+        text-decoration: none;
+      }
+
+      &__text {
+        margin-right: 1rem;
+      }
+
+      &__arrow {
+        transform: scale(0.5);
+        margin: 0;
+      }
+    }
+
+    article:nth-child(even) {
+      margin-top: 12rem;
+
+      @include media(phone) {
+        margin: $spacer 0;
+        padding: 0;
+        flex: 1;
+      }
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    margin-top: 0rem;
+    margin-left: 27.5rem;
+    background-color: #ffd6b8;
+    width: 62rem;
+    height: 62rem;
+    border-radius: 50%;
+    z-index: -1;
+
+    @include media(big-desktop) {
+      margin-left: 36.5rem;
+      width: 74rem;
+      height: 74rem;
+    }
+
+    @include media(phone) {
+      margin-left: -9.5rem;
+    }
+  }
+
+  .entry-title {
+    font-size: 2em;
+    font-weight: 400;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .entry-content {
+    width: 85%;
+    margin-top: -5.4rem;
+    font-size: 1.6rem;
+    margin-top: -5.4rem;
+
+    @include media(big-desktop) {
+      width: 100%;
+    }
+
+    @include media(phone) {
+      width: 100%;
+    }
+  }
+
+  .nav-links {
+    margin-top: $spacer;
+    font-family: $font__header;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.8rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  a:link,
+  a:visited {
+    color: $color__link;
+    text-decoration: none;
+  }
+}

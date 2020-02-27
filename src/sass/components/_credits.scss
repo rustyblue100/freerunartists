@@ -1,0 +1,140 @@
+.credits {
+  @include media(big-desktop) {
+    font-size: 1.8rem;
+  }
+
+  &__back {
+    position: relative;
+    padding-right: 2rem;
+
+    &--text {
+      opacity: 0;
+      visibility: hidden;
+      font-family: $font__header;
+      position: absolute;
+      top: 7px;
+      right: 0;
+      transition: all 0.2s;
+      display: none;
+    }
+
+    &:hover &--text {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    svg {
+      transform: rotate(180deg);
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    cursor: pointer;
+  }
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.6rem;
+  width: 100%;
+  color: $color-body;
+
+  @media only screen and (max-height: 640px) {
+    margin-top: -2rem;
+  }
+
+  @include media(phone) {
+    width: 100%;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .arrow-right {
+    margin-top: 0.3rem;
+
+    @include media(tab-port) {
+      position: relative;
+      left: 2rem;
+    }
+
+    @include media(phone) {
+      display: none;
+    }
+  }
+
+  .arrow-svg {
+    transform: scale(0.35);
+
+    @include media(tab-port) {
+      transform: scale(0.3);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none !important;
+    border: none;
+    background-color: transparent;
+    font-size: 1.8rem;
+    font-family: $font__header;
+    transition: all 0.2s;
+    color: $color-body;
+    margin-right: 0;
+
+    @include media(phone) {
+      padding: 0.7rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      background-size: contain;
+      width: 3.4rem;
+      height: 3.4rem;
+      background-repeat: no-repeat;
+    }
+
+    /*     &--audio::before {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/iconmonstr-play-thin.svg");
+    }
+
+    &--projects::before {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/iconmonstr-folder-thin.svg");
+    }
+
+    &--showreel::before {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/iconmonstr-video-camera-thin.svg");
+    }
+
+    &--press::before {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/iconmonstr-pencil-thin.svg");
+    }
+
+    &--photos::before {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/iconmonstr-photo-camera-thin.svg");
+    }
+
+    &--gallery::before {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/iconmonstr-picture-thin.svg");
+    } */
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+  }
+}

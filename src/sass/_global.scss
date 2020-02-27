@@ -1,0 +1,243 @@
+.site-title {
+  a:link,
+  a:visited {
+    color: transparent;
+    &:hover,
+    &:focus {
+      color: #222;
+    }
+  }
+}
+
+body {
+  opacity: 0;
+  transition: all 1.2s forwards;
+
+  @include media(phone) {
+    overflow-x: hidden;
+  }
+
+  &.fade-in {
+    opacity: 1;
+  }
+}
+
+.preload * {
+  transition: none !important;
+}
+
+.custom-logo {
+  max-width: 79rem;
+  max-height: 20rem;
+  margin-top: 4rem;
+  object-fit: contain;
+
+  position: relative;
+  left: -3.5vw;
+  margin-bottom: 1.5em;
+
+  @include media(big-desktop) {
+    max-width: 107rem;
+    max-height: 23rem;
+    //left: 6vw;
+  }
+
+  @include media(tab-land) {
+    max-height: 20rem;
+    max-width: 62rem;
+  }
+
+  @include media(tab-port) {
+    //left: 9vw;
+    max-width: 54rem;
+  }
+
+  @include media(phone) {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: unset;
+    margin: 8rem 0 0 0;
+  }
+
+  &.active-logo {
+    transition: transform 0.3s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    top: 1rem;
+    transform: translateX(-37%) rotate(-90deg) scale(0.25) !important;
+    filter: opacity(100%);
+
+    @media only screen and (min-width: 1025px) and (max-width: 1120px) {
+      transform: translateX(-40%) rotate(-90deg) scale(0.25);
+    }
+
+    @include media(tab-port) {
+      transform: translateX(-35%) rotate(-90deg) scale(0.25) !important;
+    }
+
+    @include media(phone) {
+      position: relative;
+      transform: none !important;
+    }
+  }
+}
+
+.entry-header {
+  margin-bottom: 4rem;
+}
+
+.site-title {
+  visibility: hidden;
+}
+
+.wp-block-media-text {
+  @include media(phone) {
+    display: block;
+  }
+}
+
+.page-template-free-page .artist__name {
+  @include media(phone) {
+    margin-top: 6rem;
+  }
+}
+
+.page-template-free-page .site-content,
+.page-template-free-page2 .site-content {
+  font-size: 1.8rem;
+}
+
+.page-template-artist,
+.page-template-free-page,
+.page-template-free-page2,
+.blog,
+.category,
+.single {
+  .custom-logo {
+    position: fixed;
+    top: 1rem;
+    transform: translateX(-37%) rotate(-90deg) scale(0.25);
+    filter: opacity(100%);
+
+    @media only screen and (min-width: 1025px) and (max-width: 1120px) {
+      transform: translateX(-40%) rotate(-90deg) scale(0.25);
+    }
+
+    @include media(phone) {
+      position: relative;
+      top: 2rem;
+      transform: none;
+    }
+  }
+}
+
+.home .site-content {
+  margin-top: -6rem;
+
+  &.active-logo {
+    margin-top: 18rem;
+  }
+}
+
+.home #my-back-button {
+  display: none;
+}
+
+#my-back-button {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  svg {
+    transform: rotate(180deg) translateX(9px);
+  }
+
+  .read-more__arrow {
+    transform: scale(0.4);
+  }
+}
+
+.site-footer {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  position: relative;
+  left: 0;
+  bottom: -1.5rem;
+  margin-top: 12rem;
+  background: #22222295;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-template-free-page .site-footer,
+.page-template-artist .site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  @include media(phone) {
+    position: relative;
+    bottom: -1.5rem;
+  }
+}
+
+.page-template-free-page2 .site-footer {
+  bottom: -1.5rem;
+}
+
+/* .fade-out {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.slide-in {
+  animation: slide-in 5s ease forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  to {
+    transform: translateX(0%);
+    visibility: hidden;
+  }
+} */
+
+//Fadein fullpage js
+.section {
+  //text-align: center;
+}
+
+.fullpage-wrapper {
+  width: 100% !important;
+  transform: none !important;
+}
+
+.fp-section {
+  width: 100% !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.fp-section.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.error-404 {
+  font-size: 1.6rem;
+}

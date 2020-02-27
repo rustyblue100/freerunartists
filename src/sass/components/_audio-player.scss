@@ -1,0 +1,157 @@
+/**
+ * 06: Playlists - WordPress-created playlists.
+ * --------------------------------------------------------------------------- */
+
+.wp-playlist {
+  margin: 0 0 1.5rem;
+  padding: 1.5rem;
+  border: none !important;
+  width: 40rem;
+  height: 100%;
+
+  @include media(phone) {
+    width: 26rem;
+  }
+}
+
+.wp-playlist-light {
+  background: rgba(50, 50, 50, 0.7) !important;
+  color: $color-primary !important;
+}
+
+.wp-playlist-dark {
+  /**
+		color:      #fff;
+		background: #000;
+		/**/
+}
+
+.wp-playlist video {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.wp-playlist audio {
+  display: none;
+  max-width: 100%;
+  width: 100%;
+}
+
+.wp-playlist .mejs-container {
+  margin: 0;
+  width: 100%;
+}
+
+.wp-playlist .mejs-controls .mejs-button button {
+  background-image: url("/wp-content/themes/freerunartists-2019/images/svg/play.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+  outline: 0;
+  margin: 3px 0 0 -6px;
+}
+
+/* All captions. */
+.wp-playlist-caption {
+  max-width: 88%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wp-playlist-item-title {
+  color: $color-primary;
+  font-size: 1.6rem !important;
+}
+
+.wp-playlist-item-artist {
+}
+
+/* Currently playing. */
+.wp-playlist-current-item {
+  margin-bottom: 1.5rem;
+  color: $color-primary;
+  font-size: 1.8rem;
+}
+
+.wp-playlist-current-item img {
+  background-image: url("/wp-content/themes/freerunartists-2019/images/svg/iconmonstr-video-camera-thin.svg");
+  max-width: 60px;
+  height: auto;
+  display: none;
+}
+.ltr .wp-playlist-current-item img {
+  float: left;
+  margin-right: 1.5rem;
+}
+.rtl .wp-playlist-current-item img {
+  float: right;
+  margin-left: 1.5rem;
+}
+
+.wp-playlist-item-meta {
+  display: block;
+}
+
+.wp-playlist-item-album {
+}
+
+/* Track list after the current item. */
+.wp-playlist-tracks {
+  margin-top: 1.5rem;
+}
+
+/* Playlist items in the list (not currently playing). */
+.wp-playlist-item {
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+}
+
+.wp-playlist-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.mejs-pause > button {
+  background-position: -4px 0 !important;
+}
+
+.wp-playlist-light .wp-playlist-item {
+}
+
+.wp-playlist-dark .wp-playlist-item {
+}
+
+/* Currently-playing item in the track list. */
+.wp-playlist-playing {
+  font-weight: bold;
+  background: transparent !important;
+  border: none !important;
+}
+
+.wp-playlist-light .wp-playlist-playing {
+}
+
+.wp-playlist-dark .wp-playlist-playing {
+}
+
+/* Captions in the list. */
+.wp-playlist-item .wp-playlist-caption {
+}
+
+.ltr .wp-playlist-item .wp-playlist-caption {
+  float: left;
+}
+.rtl .wp-playlist-item .wp-playlist-caption {
+  float: right;
+}
+
+.ltr .wp-playlist-item .wp-playlist-item-length {
+  display: none;
+  float: right;
+}
+.rtl .wp-playlist-item .wp-playlist-item-length {
+  display: none;
+  float: left;
+}

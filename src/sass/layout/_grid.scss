@@ -1,0 +1,47 @@
+.container {
+  margin: 0 auto;
+  max-width: 114rem;
+
+  @include media(big-desktop) {
+    max-width: 156rem;
+  }
+
+  @include media(medium-desktop) {
+    max-width: 114rem;
+  }
+
+  @include media(desktop) {
+    max-width: 96rem;
+  }
+
+  @include media(tab-land) {
+    max-width: 80rem;
+  }
+
+  @include media(tab-port) {
+    max-width: 54rem;
+  }
+
+  @include media(phone) {
+    padding: 0 3rem;
+    max-width: 32rem;
+  }
+
+  /*   @include media(tab-port) {
+    max-width: 72rem;
+  } */
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include media(phone) {
+      display: block;
+    }
+  }
+}
+
+.container .row:last-child() {
+  padding-bottom: 12rem;
+}

@@ -1,0 +1,60 @@
+.arrow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60rem;
+  margin: 0 auto;
+  color: #fff;
+
+  a:link,
+  a:visited {
+    font-family: $font__header;
+    font-size: 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: none;
+    }
+
+    .arrow-svg {
+      fill: $color__link;
+    }
+
+    .arrow-left {
+      height: 2rem;
+      transform: rotate(180deg) scale(0.8);
+    }
+
+    .arrow-right {
+      height: 2rem;
+      transform: scale(0.8);
+    }
+
+    &.arrow-previous::before {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/arrow-s.svg");
+      width: 18rem;
+      height: 1.9rem;
+      transform: rotate(180deg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 0.5rem;
+    }
+
+    .nav-next::after {
+      content: "";
+      background-image: url("/wp-content/themes/freerunartists-2019/images/svg/arrow-s.svg");
+      width: 18rem;
+      height: 1.9rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 0.5rem;
+    }
+  }
+}
